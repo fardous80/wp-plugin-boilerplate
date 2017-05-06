@@ -1,0 +1,17 @@
+{
+    "name": "genleeshin/wp-plugin-boilerplate",
+    "description": "Wordpress Plugin Boilerplate",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nasim Mahmud",
+            "email": "gen.lee.shin@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {}
+}
