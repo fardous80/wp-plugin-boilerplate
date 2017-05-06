@@ -60,6 +60,54 @@
 
 	- run "php main.php" to check if it's working
 
+## Action
+
+#### Wordpress fires events at various stages of it's lifecycles, you can hook an action to be executed before or after an event
+
+[x] Add Action
+
+- Wordpress fires events at various stages of it's lifecycles, you can hook an action to be executed before or after an event
+- use add_action function to attach an action to a hook
+- to remove "wordpress news" from dashboard use
+
+```php
+
+add_action('wp_dashboard_setup', function(){
+
+	remove_meta_box('dashboard_primary', 'dashboard', 'side');
+});
+
+```
+## Filter
+
+#### Filter is used to modify data
+
+[*] Add Filter
+
+- this filter is used to change country name from UK to BD
+
+```php
+	
+	add_filter('country', function($country){
+		return 'BD';
+	}, 2);
+
+	add_filter('country', function($country){
+		return 'PK';
+	}, 1);
+
+
+	// call filter
+
+	$country = apply_filters('country', 'UK');
+
+	echo 'changed UK to ' . $country;
+
+```
+
+- although last filter is PK, BD is applied since it has higher priority number: 2
+
+
 [ ] Template Tags
 
 [ ] Store Options
