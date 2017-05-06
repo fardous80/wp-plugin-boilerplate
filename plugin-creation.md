@@ -37,7 +37,7 @@
 	- now add the following lines to the file
 
 ```
-	 "autoload": {
+	"autoload": {
         "psr-4": {
             "App\\": "src/"
         }
@@ -45,13 +45,14 @@
 
 ```
 	
-	- in main plugin php file
+	- in the main plugin php file
 
 ```php
 
 	require __DIR__.'/../vendor/autoload.php';
 
-	require_once __DIR__ . '/../src/helpers.php';
+	new App\App();
+
 
 ```
 
