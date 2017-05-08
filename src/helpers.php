@@ -7,7 +7,7 @@ function _sf_view($file, $data = []){
 	extract($data);
 
 	ob_start();
-		require _sf_dir_views_ . $file  . '.php';
+		require \App\Core\Config::get('root') . '/views/' . $file  . '.php';
 		$output = ob_get_contents();
 	ob_end_clean();
 	
