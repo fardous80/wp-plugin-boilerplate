@@ -1,12 +1,12 @@
 <?php 
 
-namespace App\Actions;
+namespace App\Wordpress;
 
-class Action{
+class Facade{
 
 	public static function __callStatic($method, $args=null) {
 
-		$class = '\\App\\Actions\\' . $method;
+		$class = '\\App\\Wordpress\\' . $method;
 
 		$reflect  = new \ReflectionClass($class);
 

@@ -1,6 +1,6 @@
 <?php 
 
-namespace App\Actions;
+namespace App\Wordpress;
 
 /**
  * Add / Remove Metabox
@@ -54,7 +54,7 @@ class MetaBox{
 
 			// remove_meta_box( $item_id, $page_it_belongs, $where_it_apperas );
 
-			remove_meta_box($that->id, $that->slug, $that->context);
+			remove_meta_box($that->id, $that->belongsTo, $that->context);
 		});
 	
 	}

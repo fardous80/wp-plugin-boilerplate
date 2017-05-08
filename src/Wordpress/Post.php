@@ -1,21 +1,21 @@
 <?php 
 
-namespace App\Actions;
+namespace App\Wordpress;
 
 /**
 * Create custom Post Type
 */
 
-class PostType
+class Post
 {
 
 	use TraitPostType;
 
-	public function __construct($id, $label=null){
+	public function __construct($name, $label=null){
 
-		$this->id = $id;
+		$this->name = $name;
 
-		$this->label = $label?:ucfirst($id);
+		$this->label = $label?:ucfirst($name);
 	}
 
 	protected $args = [
@@ -49,13 +49,13 @@ class PostType
 
 		$args['labels'] = $this->labels;
 
-		$id = $this->id;
+		$name = $this->name;
 
 		//die(var_dump($args));
 
-		add_action('init', function() use ($id, $args){
+		add_action('init', function() use ($name, $args){
 
-			register_post_type( $id, $args);
+			register_post_type( $name, $args);
 
 		});
 	}

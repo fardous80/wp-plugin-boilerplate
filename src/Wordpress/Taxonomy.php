@@ -1,6 +1,6 @@
 <?php 
 
-namespace App\Actions;
+namespace App\Wordpress;
 
 /**
 * Create custom Post Type
@@ -11,11 +11,9 @@ class Taxonomy
 
 	use TraitPostType;
 
-	public function __construct($id, $taxonomy, $label){
+	public function __construct($name, $label){
 
-		$this->id = $id;
-
-		$this->taxonomy = $taxonomy;
+		$this->name = $name;
 
 		$this->label = $label;
 	}
@@ -53,7 +51,7 @@ class Taxonomy
 
 		add_action('init', function() use ($that){
 
-			register_taxonomy( $that->taxonomy, $that->id, $that->args);
+			register_taxonomy( $that->name, $that->belongsTo, $that->args);
 
 		});
 	}

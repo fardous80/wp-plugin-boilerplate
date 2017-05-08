@@ -1,10 +1,12 @@
 <?php 
 
-namespace App\Actions;
+namespace App\Wordpress;
 
 trait TraitAction{
 
 	protected $id = null;
+
+	protected $name = null;
 
 	protected $label = null;
 
@@ -22,6 +24,16 @@ trait TraitAction{
 
 	protected $taxonomy = null;
 
+	protected $belongsTo = null;
+
+	public function id($id){
+	
+		$this->id = $id;
+
+		return $this;
+	
+	}
+
 
 	public function label($label){
 	
@@ -31,9 +43,9 @@ trait TraitAction{
 	
 	}
 
-	public function id($id){
+	public function name($name){
 	
-		$this->id = $id;
+		$this->name = $name;
 
 		return $this;
 	
@@ -83,6 +95,21 @@ trait TraitAction{
 	
 		$this->plural = $plural;
 	
+	}
+
+	/*
+	|----------------------
+	|Use
+	|----------------------
+	| taxonomy belongs to a post
+	| meta belongs to a taxonomy
+	*/
+
+	public function belongsTo($belongsTo){
+
+		$this->belongsTo = $belongsTo;
+
+		return $this;
 	}
 
 }

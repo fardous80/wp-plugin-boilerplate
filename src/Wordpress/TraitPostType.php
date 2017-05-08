@@ -1,6 +1,6 @@
 <?php 
 
-namespace App\Actions;
+namespace App\Wordpress;
 
 trait TraitPostType{
 
