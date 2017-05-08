@@ -45,13 +45,14 @@ w::MetaBox('job_listing_box', 'Job Listing')
 
 // save post
 
-add_action('save_post', function($post_id){
+add_action('save_post_job', function($post_id){
 
-	$post_type = get_post_type($post_id);
+	if ( wp_is_post_revision( $post_id ) )
+		return;
 
-	if($post_type != 'job') return;
+	if(!isset($_POST['job_id'])) return;
 
-	update_post_meta($post_id, 'job_id', sanitize_text_field($_POST['job_id']));
+	update_post_meta($post_id, 'job_id', sanitize_text_field( $_POST['job_id'] ) );
 });
 
 function social_networks() {

@@ -94,6 +94,8 @@ trait TraitAction{
 	public function plural($plural){
 	
 		$this->plural = $plural;
+
+		return $this;
 	
 	}
 

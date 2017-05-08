@@ -70,10 +70,4 @@ trait TraitPostType{
 
 	}
 
-	public function plural($plural){
-	
-		$this->plural = $plural;
-	
-	}
-
 }

@@ -31,7 +31,7 @@ class MetaBox{
 
 				$this->callback,
 
-				$this->slug,
+				$this->belongsTo,
 
 				$this->context,
 
