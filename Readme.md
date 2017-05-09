@@ -1,13 +1,13 @@
 # ~~~~~~~~~~~~ FOR TESTING ONLY ~~~~~~~~~~~~~
 
-# WORDPRESS PLUGIN CREATION BOILERPLATE
+# WORDPRESS PLUGIN BOILERPLATE
 
-#### A Boilerplace for quick Wordpress plugin creation
+#### A Boilerplate for quick Wordpress plugin creation
 
 ## Installation
 
 ```
-	git clone url plugin_name
+	git clone https://github.com/fardous80/wp-plugin-boilerplate.git plugin_name
 
 ```
 
