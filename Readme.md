@@ -20,8 +20,7 @@
 
 ## Create a Custom Post Type
 
-------------------------------------------------------------------
-> Create a Custom Post Type **Book**
+Create a Custom Post Type **Book**
 ------------------------------------------------------------------
 
 In 'app/Back.php' add the following lines
@@ -31,14 +30,10 @@ In 'app/Back.php' add the following lines
 	w::Post('book', 'Book')
 		->register();
 
+
 ```
 
-'book': post_type
-'Book': Label
-
-*Both required
-
-You can pass more parameters by simply chaining them
+You add more parameters by chaining them
 
 ```php
 
@@ -53,9 +48,8 @@ You can pass more parameters by simply chaining them
 
 ```
 
-------------------------------------------------------------------
-> Creating **MetaBox** for Book Post Type
-------------------------------------------------------------------
+Creating **MetaBox** for Custom Post Type
+
 
 ```php
 	
@@ -105,7 +99,7 @@ Create 'form.php' in 'views/test/' folder and put the following lines
 
 ```
 
-## set taxonomy for custom post type
+## Set Taxonomy for Custom Post Type
 
 ```php
 
