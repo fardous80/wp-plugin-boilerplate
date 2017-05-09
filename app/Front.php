@@ -1,3 +1,3 @@
 <?php 
 
-// remove wp news from admin dashboard
+// Frontend code goes here

@@ -6,7 +6,7 @@ namespace App\Wordpress;
  * Add / Remove Metabox
  */
 
-class MetaBox{
+class MetaBox extends Wordpress{
 
 	use TraitAction;
 
@@ -17,11 +17,13 @@ class MetaBox{
 		$this->label = $label;
 	}
 
-	public function attach(){
+	public function attach($callback = null){
+
+		$callback = $callback ? $callback : $this->callback;
 
 		//die(var_dump($this));
 	
-		add_action( 'add_meta_boxes', function() {
+		add_action( 'add_meta_boxes', function() use($callback){
 
 			add_meta_box(
 
@@ -29,7 +31,7 @@ class MetaBox{
 
 				$this->label,
 
-				$this->callback,
+				$callback,
 
 				$this->belongsTo,
 
@@ -42,6 +44,27 @@ class MetaBox{
 			);
 
 		});
+
+		return $this;
+	
+	}
+
+	public function save($callback){
+
+		add_action('save_post_' . $this->belongsTo, $callback);
+
+		return $this;
+	
+	}
+
+	public function savePostMeta($post_id){
+	
+		if(! wp_verify_nonce($_POST[$nonce_value], $nonce_key) ){
+
+			die('nonce invalid');
+		}
+
+		die($post_id);
 	
 	}
 
