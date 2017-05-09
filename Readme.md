@@ -20,10 +20,8 @@
 
 ## Create a Custom Post Type
 
-Create a Custom Post Type **Book**
-------------------------------------------------------------------
 
-In 'app/Back.php' add the following lines
+To create a Custom Post Type, In 'app/Back.php' add the following lines
 
 ```php
 
@@ -33,7 +31,7 @@ In 'app/Back.php' add the following lines
 
 ```
 
-You add more parameters by chaining them
+You can add more parameters by chaining them
 
 ```php
 
