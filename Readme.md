@@ -73,8 +73,7 @@ Creating **MetaBox** for Custom Post Type
 		});
 
 ```
-
-Create 'form.php' in 'views/test/' folder and put the following lines
+All view / template files should be inside 'views' folder, in the example above the file 'view/test/form.php' will be parsed and outputted.
 
 ```html
 
