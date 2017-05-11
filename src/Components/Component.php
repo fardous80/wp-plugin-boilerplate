@@ -18,7 +18,7 @@ abstract class Component{
 			$tpl = strtolower(implode('-', $parts));
 		}
 
-		return _sf_view('components.' . $tpl . '.' . $tpl, $data);
+		return _sf_view('components.' . $tpl, $data);
 	
 	}
 }

@@ -2,7 +2,7 @@
 
 namespace App\Wordpress;
 
-abstract class Wordpress{
+abstract class Wordpress extends Collection{
 	
 	protected $attributes = [];
 
@@ -30,5 +30,18 @@ abstract class Wordpress{
     
     }
 
+    public function getAttributes(){
+    
+    	return $this->attributes;
+    
+    }
+
+    public function __call($method, $arg){
+    
+    	$this->attributes[$method] = $arg[0];
+
+    	return $this;
+    
+    }
 
 }
