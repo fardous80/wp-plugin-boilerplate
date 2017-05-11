@@ -11,17 +11,25 @@
 
 ```
 
+<<<<<<< HEAD
+
+=======
 ## Usage
 
 - app/Back.php deals with Backend
 
 - app/Front.php deals with Frontend
+>>>>>>> 51deb6fd1b9ee70dbd6e0ebe8883998b3bdff0b8
 
 
 ## Create a Custom Post Type
 
 
+<<<<<<< HEAD
+To create a Custom Post Type, In 'index.php' add the following lines
+=======
 To create a Custom Post Type, In 'app/Back.php' add the following lines
+>>>>>>> 51deb6fd1b9ee70dbd6e0ebe8883998b3bdff0b8
 
 ```php
 
@@ -73,7 +81,12 @@ Creating **MetaBox** for Custom Post Type
 		});
 
 ```
+<<<<<<< HEAD
+
+Create 'form.php' in 'views/test/' folder and put the following lines
+=======
 All view / template files should be inside 'views' folder, in the example above the file 'view/test/form.php' will be parsed and outputted.
+>>>>>>> 51deb6fd1b9ee70dbd6e0ebe8883998b3bdff0b8
 
 ```html
 
