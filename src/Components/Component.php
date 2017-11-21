@@ -2,6 +2,8 @@
 
 namespace App\Components;
 
+use App\Wordpress\MetaBox;
+
 abstract class Component{
 
 	public function view($tpl=null,$data=null){
@@ -20,5 +22,19 @@ abstract class Component{
 
 		return _sf_view('components.' . $tpl, $data);
 	
+	}
+
+	public function create($post_type, $name, $title)
+	{
+		(new MetaBox($name, $title))
+			->belongsTo($post_type)
+			->priority('high')
+			->attach(function($post){
+				$this->form($post);
+			})
+			->save(function($post_id){
+				$this->save($post_id);
+			});
+
 	}
 }

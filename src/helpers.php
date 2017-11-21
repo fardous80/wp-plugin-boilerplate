@@ -88,3 +88,8 @@ function _sf_verify_nonce($key, $value){
 
 	}
 }
+
+function _sf_value($data, $key, $default=''){
+
+	return isset($data[$key])?$data[$key][0]:$default;
+}
